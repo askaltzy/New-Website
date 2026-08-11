@@ -11,7 +11,7 @@ const TRANSLATIONS = {
     scroll_hint:'SCROLL DOWN',
     about_tag:'About Me',
     about_heading:'Frontend Developer & UI Enthusiast',
-    about_p1:"Hi, I'm Nexa Dev — a passionate frontend developer who loves crafting beautiful, responsive, and high-performance web interfaces. I specialize in turning complex ideas into stunning digital realities.",
+    about_p1:"Hi, I'm AskalXML Dev — a passionate frontend developer who loves crafting beautiful, responsive, and high-performance web interfaces. I specialize in turning complex ideas into stunning digital realities.",
     about_p2:'With expertise in React, Next.js, and modern CSS frameworks, I build seamless user experiences that not only look amazing but also perform flawlessly across all devices.',
     stat1:'Projects Done', stat2:'Years Exp.', stat3:'Satisfaction', stat4:'Coffee Consumed',
     badge_open:'Open to Work',
@@ -24,9 +24,9 @@ const TRANSLATIONS = {
     sk6_title:'3D & Graphics', sk6_desc:'Adding immersive 3D experiences with Three.js and WebGL technologies.',
     proj_tag:'Projects', proj_title_hl:'Works',
     p1_title:'Reaction Channel WhatsApp', p1_desc:'Auto-reaction bot for WhatsApp channels with custom emoji responses, scheduled reactions, and analytics dashboard.',
-    p2_title:'NEXA Lobby Generator', p2_desc:'Free Fire lobby generator with HD image export, custom nickname styling, and MLBB support. Features real-time preview.',
+    p2_title:'AskalXML Lobby Generator', p2_desc:'Free Fire lobby generator with HD image export, custom nickname styling, and MLBB support. Features real-time preview.',
     p3_title:'All Media Downloader', p3_desc:'Universal social media downloader supporting TikTok, Instagram, YouTube, and Twitter. Features HD quality and batch download.',
-    p4_title:'NEXA IQC Generator', p4_desc:'iPhone Quote Card generator with customizable templates, font styling, and instant download. Features server health monitoring.',
+    p4_title:'AskalXML IQC Generator', p4_desc:'iPhone Quote Card generator with customizable templates, font styling, and instant download. Features server health monitoring.',
     contact_tag:'Contact',
     contact_title:'Let\'s Build Something <span>Amazing</span>',
     contact_h2:'Have a project in mind?',
@@ -45,7 +45,7 @@ const TRANSLATIONS = {
     scroll_hint:'GULIR KE BAWAH',
     about_tag:'Tentang Saya',
     about_heading:'Frontend Developer & Pecinta UI',
-    about_p1:'Halo, saya Nexa Dev — seorang frontend developer yang bersemangat dalam membangun antarmuka web yang indah, responsif, dan berperforma tinggi. Saya mengkhususkan diri dalam mengubah ide kompleks menjadi realitas digital yang memukau.',
+    about_p1:'Halo, saya AskalXML Dev — seorang frontend developer yang bersemangat dalam membangun antarmuka web yang indah, responsif, dan berperforma tinggi. Saya mengkhususkan diri dalam mengubah ide kompleks menjadi realitas digital yang memukau.',
     about_p2:'Dengan keahlian di React, Next.js, dan framework CSS modern, saya membangun pengalaman pengguna yang mulus, tampak luar biasa, dan bekerja sempurna di semua perangkat.',
     stat1:'Proyek Selesai', stat2:'Tahun Pengalaman', stat3:'Kepuasan', stat4:'Kopi Diminum',
     badge_open:'Siap Bekerja',
@@ -58,9 +58,9 @@ const TRANSLATIONS = {
     sk6_title:'3D & Grafis', sk6_desc:'Menambahkan pengalaman 3D yang imersif dengan Three.js dan teknologi WebGL.',
     proj_tag:'Proyek', proj_title_hl:'Karya',
     p1_title:'Reaksi Channel WhatsApp', p1_desc:'Bot auto-reaksi untuk channel WhatsApp dengan respons emoji kustom, reaksi terjadwal, dan dashboard analitik.',
-    p2_title:'Generator Lobby NEXA', p2_desc:'Generator lobby Free Fire dengan ekspor gambar HD, styling nickname kustom, dan dukungan MLBB. Fitur pratinjau real-time.',
+    p2_title:'Generator Lobby AskalXML', p2_desc:'Generator lobby Free Fire dengan ekspor gambar HD, styling nickname kustom, dan dukungan MLBB. Fitur pratinjau real-time.',
     p3_title:'Pengunduh Media Universal', p3_desc:'Pengunduh media sosial universal mendukung TikTok, Instagram, YouTube, dan Twitter. Fitur kualitas HD dan unduh batch.',
-    p4_title:'Generator IQC NEXA', p4_desc:'Generator Quote Card iPhone dengan template yang dapat dikustomisasi, styling font, dan unduh instan. Fitur pemantauan kesehatan server.',
+    p4_title:'Generator IQC AskalXML', p4_desc:'Generator Quote Card iPhone dengan template yang dapat dikustomisasi, styling font, dan unduh instan. Fitur pemantauan kesehatan server.',
     contact_tag:'Kontak',
     contact_title:'Mari Bangun Sesuatu yang <span>Luar Biasa</span>',
     contact_h2:'Punya proyek yang ingin dikerjakan?',
@@ -166,5 +166,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ─── Easter egg ─────────────────────────── */
-console.log('%c⚡ NEXA DEV','color:#7DF9C8;font-size:2rem;font-weight:bold;font-family:monospace;');
+console.log('%c⚡ AskalXML DEV','color:#7DF9C8;font-size:2rem;font-weight:bold;font-family:monospace;');
 console.log('%cFrontend Developer Portfolio','color:#A78BFA;font-size:1rem;font-family:monospace;');
