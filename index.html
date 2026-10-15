@@ -1,305 +1,41 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AskalXML — Frontend Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AskalXML — Frontend Developer</title>
+<style>html,body{height:100%;margin:0;background:#050517;color:#ddd;font-family:sans-serif}#status{display:flex;align-items:center;justify-content:center;height:100vh;font-size:16px;opacity:0.9}</style>
 </head>
 <body>
+<div id="status">Loading...</div>
+<script>
+(async()=>{
+  try{
+    const b64ToU8 = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
+    const keyRaw = b64ToU8("5HMkZZjiFZ52cLX5ur4Jdk/0DdDehl+OTk37oym81wo=");
+    const iv = b64ToU8("QMu5/C18x0jDxOlT");
+    const ct = b64ToU8("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");
 
-  <div class="bg-layer"></div>
-  <div class="bg-overlay"></div>
-  <div class="bg-noise"></div>
+    const key = await crypto.subtle.importKey("raw", keyRaw.buffer, {name:"AES-GCM"}, false, ["decrypt"]);
+    const pt = await crypto.subtle.decrypt({name:"AES-GCM", iv}, key, ct.buffer);
+    const html = new TextDecoder().decode(pt);
 
-  <div class="floating-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
+    // Create iframe and use srcdoc for best inline-script compatibility
+    const iframe = document.createElement('iframe');
+    iframe.style.border = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100vh';
+    iframe.srcdoc = html;
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-logo">
-      <i class="fas fa-code"></i>
-      AskalXML
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home"     class="active" data-i18n="nav_home">Home</a></li>
-      <li><a href="#about"    data-i18n="nav_about">About</a></li>
-      <li><a href="#skills"   data-i18n="nav_skills">Skills</a></li>
-      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-      <li><a href="#contact"  data-i18n="nav_contact">Contact</a></li>
-    </ul>
-    <button class="lang-btn" id="langBtn" aria-label="Switch Language">
-      <i class="fas fa-globe"></i>
-      <span id="langLabel">ID</span>
-    </button>
-    <a href="#contact" class="nav-cta" data-i18n="nav_cta">
-      Let's Talk <i class="fas fa-arrow-right"></i>
-    </a>
-    <div class="nav-mobile-btn" id="menuBtn" aria-label="Toggle Menu">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <!-- ══════ HERO ══════ -->
-  <section class="hero" id="home">
-    <div class="hero-badge reveal">
-      <span class="status-dot"></span>
-      <span data-i18n="hero_badge">about me</span>
-    </div>
-    <h1 class="hero-title reveal stagger-1">
-      Askàll <span class="gradient-text">XML.</span>
-    </h1>
-    <p class="hero-subtitle reveal stagger-2" data-i18n="hero_sub">
-      Frontend Developer &amp; UI Designer. Crafting pixel-perfect, immersive web experiences with modern technologies.
-    </p>
-    <div class="hero-cta reveal stagger-3">
-      <a href="#projects" class="btn-primary" data-i18n="hero_cta1">View My Work <i class="fas fa-arrow-down"></i></a>
-      <a href="#contact"  class="btn-ghost"   data-i18n="hero_cta2">Get In Touch <i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="scroll-indicator reveal stagger-4">
-      <span data-i18n="scroll_hint">SCROLL DOWN</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════ ABOUT ══════ -->
-  <section id="about">
-    <div class="section-header reveal">
-      <div class="section-tag"><i class="fas fa-user"></i> <span data-i18n="about_tag">About Me</span></div>
-      <h2 class="section-title">Meet <span>AskalXML</span></h2>
-    </div>
-    <div class="about-content">
-      <div class="about-text reveal-left">
-        <h3 data-i18n="about_heading">Frontend Developer &amp; UI Enthusiast</h3>
-        <p data-i18n="about_p1">
-          Hi, I'm Kàll pàrkér. — a passionate frontend developer who loves crafting beautiful, responsive, and high-performance web interfaces. I specialize in turning complex ideas into stunning digital realities.
-        </p>
-        <p data-i18n="about_p2">
-          With expertise in React, Next.js, and modern CSS frameworks, I build seamless user experiences that not only look amazing but also perform flawlessly across all devices.
-        </p>
-        <div class="about-stats">
-          <div class="stat-item reveal stagger-1"><i class="fas fa-rocket"></i><span class="num">50+</span><span class="label" data-i18n="stat1">Projects Done</span></div>
-          <div class="stat-item reveal stagger-2"><i class="fas fa-clock"></i><span class="num">3+</span><span class="label" data-i18n="stat2">Years Exp.</span></div>
-          <div class="stat-item reveal stagger-3"><i class="fas fa-heart"></i><span class="num">100%</span><span class="label" data-i18n="stat3">Satisfaction</span></div>
-          <div class="stat-item reveal stagger-4"><i class="fas fa-coffee"></i><span class="num">∞</span><span class="label" data-i18n="stat4">Coffee Consumed</span></div>
-        </div>
-      </div>
-      <div class="about-visual reveal-right">
-        <div class="avatar-container">
-          <div class="avatar-glow"></div>
-          <div class="avatar-frame">
-            <img src="https://c.termai.cc/i106/ZgxUuu.jpg" alt="AskalXML Dev" class="avatar-img" loading="lazy">
-          </div>
-          <div class="floating-elements">
-            <div class="float-icon"><i class="fab fa-react"></i></div>
-            <div class="float-icon"><i class="fab fa-js"></i></div>
-            <div class="float-icon"><i class="fab fa-css3-alt"></i></div>
-          </div>
-          <div class="avatar-badge"><i class="fas fa-circle-check"></i> <span data-i18n="badge_open">Open to Work</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════ SKILLS ══════ -->
-  <section id="skills">
-    <div class="section-header reveal">
-      <div class="section-tag"><i class="fas fa-layer-group"></i> <span data-i18n="skills_tag">Skills</span></div>
-      <h2 class="section-title">My <span data-i18n="skills_title_hl">Expertise</span></h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal stagger-1" data-level="95">
-        <div class="skill-icon"><i class="fab fa-react"></i></div>
-        <h3 data-i18n="sk1_title">React Ecosystem</h3>
-        <p data-i18n="sk1_desc">Building dynamic user interfaces with React, Next.js, and modern hooks architecture.</p>
-        <div class="skill-tags"><span>React</span><span>Next.js</span><span>Hooks</span><span>Context</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-      <div class="skill-card reveal stagger-2" data-level="90">
-        <div class="skill-icon"><i class="fab fa-js"></i></div>
-        <h3 data-i18n="sk2_title">JavaScript &amp; TypeScript</h3>
-        <p data-i18n="sk2_desc">Writing clean, type-safe code with modern ES6+ features and TypeScript integration.</p>
-        <div class="skill-tags"><span>ES6+</span><span>TypeScript</span><span>Async/Await</span><span>DOM API</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-      <div class="skill-card reveal stagger-3" data-level="92">
-        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-        <h3 data-i18n="sk3_title">Styling &amp; Animation</h3>
-        <p data-i18n="sk3_desc">Creating beautiful, responsive designs with Tailwind, SCSS, and smooth animations.</p>
-        <div class="skill-tags"><span>Tailwind</span><span>SCSS</span><span>Framer</span><span>GSAP</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-      <div class="skill-card reveal stagger-4" data-level="85">
-        <div class="skill-icon"><i class="fas fa-mobile-screen"></i></div>
-        <h3 data-i18n="sk4_title">Responsive Design</h3>
-        <p data-i18n="sk4_desc">Building mobile-first experiences that work flawlessly across all devices.</p>
-        <div class="skill-tags"><span>Mobile First</span><span>Flexbox</span><span>Grid</span><span>PWA</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-      <div class="skill-card reveal stagger-5" data-level="80">
-        <div class="skill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-        <h3 data-i18n="sk5_title">UI/UX Design</h3>
-        <p data-i18n="sk5_desc">Designing intuitive interfaces in Figma with focus on user experience.</p>
-        <div class="skill-tags"><span>Figma</span><span>Prototyping</span><span>Design Sys</span><span>Wireframe</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-      <div class="skill-card reveal stagger-1" data-level="75">
-        <div class="skill-icon"><i class="fas fa-cube"></i></div>
-        <h3 data-i18n="sk6_title">3D &amp; Graphics</h3>
-        <p data-i18n="sk6_desc">Adding immersive 3D experiences with Three.js and WebGL technologies.</p>
-        <div class="skill-tags"><span>Three.js</span><span>WebGL</span><span>Blender</span><span>GLSL</span></div>
-        <div class="skill-level"><div class="skill-level-bar"><div class="skill-level-fill"></div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════ PROJECTS ══════ -->
-  <section id="projects">
-    <div class="section-header reveal">
-      <div class="section-tag"><i class="fas fa-folder-open"></i> <span data-i18n="proj_tag">Projects</span></div>
-      <h2 class="section-title">Featured <span data-i18n="proj_title_hl">Works</span></h2>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card reveal stagger-1">
-        <div class="project-image">
-          <img src="https://c.termai.cc/i120/w2F.jpg" alt="Reaction Channel WhatsApp" loading="lazy">
-          <div class="project-overlay"></div>
-          <div class="project-links">
-            <a href="#" class="project-link" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-num">01 / AUTOMATION</div>
-          <h3 data-i18n="p1_title">Reaction Channel WhatsApp</h3>
-          <p data-i18n="p1_desc">Auto-reaction bot for WhatsApp channels with custom emoji responses, scheduled reactions, and analytics dashboard.</p>
-          <div class="project-tags"><span>PHP</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal stagger-2">
-        <div class="project-image">
-          <img src="https://c.termai.cc/i149/SoqWk.jpg" alt="Loby FF & HD Gambar" loading="lazy">
-          <div class="project-overlay"></div>
-          <div class="project-links">
-            <a href="#" class="project-link" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-num">02 / GAME TOOLS</div>
-          <h3 data-i18n="p2_title">AskalXML Lobby Generator</h3>
-          <p data-i18n="p2_desc">Free Fire lobby generator with HD image export, custom nickname styling, and MLBB support. Features real-time preview.</p>
-          <div class="project-tags"><span>Vue.js</span><span>Canvas API</span><span>HTML2Canvas</span><span>Vite</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal stagger-3">
-        <div class="project-image">
-          <img src="https://c.termai.cc/i138/PcvAhP.jpg" alt="All Downloader Media Sosial" loading="lazy">
-          <div class="project-overlay"></div>
-          <div class="project-links">
-            <a href="#" class="project-link" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-num">03 / DOWNLOADER</div>
-          <h3 data-i18n="p3_title">All Media Downloader</h3>
-          <p data-i18n="p3_desc">Universal social media downloader supporting TikTok, Instagram, YouTube, and Twitter. Features HD quality and batch download.</p>
-          <div class="project-tags"><span>PHP</span><span>API Integration</span><span>PWA</span><span>TypeScript</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal stagger-4">
-        <div class="project-image">
-          <img src="https://c.termai.cc/i117/ASP6xQB.jpg" alt="IGC Generator" loading="lazy">
-          <div class="project-overlay"></div>
-          <div class="project-links">
-            <a href="#" class="project-link" title="View Live"><i class="fas fa-external-link-alt"></i></a>
-            <a href="#" class="project-link" title="View Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="project-content">
-          <div class="project-num">04 / GENERATOR</div>
-          <h3 data-i18n="p4_title">AskalXML IQC Generator</h3>
-          <p data-i18n="p4_desc">iPhone Quote Card generator with customizable templates, font styling, and instant download. Features server health monitoring.</p>
-          <div class="project-tags"><span>React</span><span>Canvas</span><span>Framer Motion</span><span>Supabase</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ══════ CONTACT ══════ -->
-  <section id="contact">
-    <div class="section-header reveal">
-      <div class="section-tag"><i class="fas fa-paper-plane"></i> <span data-i18n="contact_tag">Contact</span></div>
-      <h2 class="section-title" data-i18n="contact_title">Let's Build Something <span>Amazing</span></h2>
-    </div>
-    <div class="contact-content">
-      <div class="contact-info reveal-left">
-        <h2 data-i18n="contact_h2">Have a project in mind?</h2>
-        <p data-i18n="contact_p">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div><label data-i18n="ci_email">Email</label><span>Email Kamu</span></div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-location-dot"></i>
-            <div><label data-i18n="ci_loc">Location</label><span>Indonesia (WIB)</span></div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-clock"></i>
-            <div><label data-i18n="ci_resp">Response Time</label><span data-i18n="ci_resp_val">Within 24 hours</span></div>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="contact-card reveal-right">
-        <div class="contact-card-content">
-          <h3><i class="fas fa-bolt" style="color:var(--accent);margin-right:.5rem;"></i> <span data-i18n="quick_contact">Quick Contact</span></h3>
-          <div class="email-display"><i class="fas fa-at"></i>Email Kamu</div>
-          <div class="availability-status">
-            <i class="fas fa-circle-check"></i>
-            <span data-i18n="avail_status">Contact me</span>
-          </div>
-          <a href="mailto:hello@nexadev.id" class="btn-primary" style="width:100%;justify-content:center;">
-            <span data-i18n="send_email">Send Email</span> <i class="fas fa-paper-plane"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo"><i class="fas fa-code"></i> Askall Dev</div>
-      <p class="footer-text">
-        © 2026 Kàll pàrkér. <span data-i18n="footer_made">Made with</span> <span class="footer-heart"><i class="fas fa-heart"></i></span> <span data-i18n="footer_coffee">and lots of coffee</span>
-      </p>
-      <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i> <span data-i18n="back_top">Back to Top</span></a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    // replace body content with iframe
+    document.body.innerHTML = '';
+    document.body.appendChild(iframe);
+  }catch(e){
+    const el = document.getElementById('status');
+    if(el) el.innerHTML = '<div style="color:#ff8080; text-align:center;">Decryption failed.<br>' + (e && e.message ? e.message : e) + '</div>';
+    console.error(e);
+  }
+})();
+</script>
 </body>
 </html>
